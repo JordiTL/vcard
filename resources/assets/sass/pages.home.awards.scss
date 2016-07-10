@@ -1,0 +1,47 @@
+@import "predef";
+
+#awards{
+  .resume-box {
+    margin-bottom: 50px;
+
+
+    h4 {
+      margin-top: 0
+    }
+
+    span {
+      color: $regent-grey;
+      font-weight: 400;
+      font-style: italic
+    }
+
+    .box-content {
+      padding: 10px 0;
+      border-top: $regent-grey solid 1px;
+      margin-top: 10px;
+
+      .award-title{
+        margin-top:20px;
+      }
+
+      .award-subtitle{
+        margin-bottom:20px;
+        text-align: center;
+        color: #808c99;
+      }
+
+      p{
+        text-align: justify;
+      }
+
+    }
+  }
+  .icon-container{
+    height: 100px;
+    margin:40px;
+
+    img{
+      height:inherit;
+    }
+  }
+}

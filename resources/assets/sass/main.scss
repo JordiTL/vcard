@@ -1,0 +1,12 @@
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+@import 'predef';
+@import 'common';
+@import 'includes.header.scss';
+@import 'pages.home.splash';
+@import 'pages.home.education';
+@import 'pages.home.toolbox';
+@import 'pages.home.languages';
+@import 'pages.home.experience';
+@import 'pages.home.awards';
+@import 'pages.home.contact';

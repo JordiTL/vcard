@@ -1,0 +1,114 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+
+// *********************************************************************************************************************
+// * FONT VARIABLES                                                                                                    *
+// *********************************************************************************************************************
+$font-size-small: 12px;
+$font-size-regular: 16px;
+$font-size-large: 24px;
+$font-size-x-large: 32px;
+$font-size-xx-large: 48px;
+$font-size-xxx-large: 64px;
+$font-size-xxxx-large: 96px;
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-bold: 600;
+
+$font-family-text: "Lato","source-sans-pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+$font-family-display: "source-serif-pro",Georgia,"Times New Roman",Times,serif;
+$font-family-code: "source-code-pro",Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
+
+
+// *********************************************************************************************************************
+// * COLOR VARIABLES                                                                                                   *
+// *********************************************************************************************************************
+$white: #ffffff;
+$black: #000000;
+$grey: #464646;
+$iron: #dadbdf;
+$regent-grey: #808c99;
+
+// *********************************************************************************************************************
+// * MIXINS                                                                                                            *
+// *********************************************************************************************************************
+@mixin background-size($size) {
+  -webkit-background-size: $size;
+  -moz-background-size: $size;
+  -ms-background-size: $size;
+  -o-background-size: $size;
+  background-size: $size;
+}
+
+@mixin border-radius($radius){
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin transition($val){
+  -webkit-transition: $val;
+  -moz-transition: $val;
+  -ms-transition: $val;
+  -o-transition: $val;
+  transition: $val;
+}
+
+@mixin animation($animate...) {
+  $max: length($animate);
+  $animations: '';
+
+  @for $i from 1 through $max {
+    $animations: #{$animations + nth($animate, $i)};
+
+    @if $i < $max {
+      $animations: #{$animations + ", "};
+    }
+  }
+  -webkit-animation: $animations;
+  -moz-animation:    $animations;
+  -ms-animation:     $animations;
+  -o-animation:      $animations;
+  animation:         $animations;
+}
+
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+// *********************************************************************************************************************
+// * ANIMATION FRAMES                                                                                                  *
+// *********************************************************************************************************************
+@include keyframes(fade-in) {
+  0%   { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+@include keyframes(fade-out) {
+  0%   { opacity: 1.0; }
+  100% { opacity: 0.0; }
+}
+
+@include keyframes(fade-in-middle) {
+  0%   { opacity: 0.5; }
+  100% { opacity: 1.0; }
+}
+
+@include keyframes(fade-out-middle) {
+  0%   { opacity: 1.0; }
+  100% { opacity: 0.5; }
+}
+

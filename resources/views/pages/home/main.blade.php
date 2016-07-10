@@ -1,0 +1,9 @@
+@extends('layouts.default')
+@section('content')
+    @include('pages.home.splash')
+    @include('pages.home.education')
+    @include('pages.home.languages')
+    @include('pages.home.experience')
+    @include('pages.home.toolbox')
+    @include('pages.home.awards')
+@stop

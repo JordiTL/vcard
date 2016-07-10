@@ -1,0 +1,31 @@
+@import "predef";
+
+#education{
+  .resume-box {
+    margin-bottom: 50px;
+
+
+    h4 {
+      margin-top: 0
+    }
+
+    span {
+      color: $regent-grey;
+      font-weight: 400;
+      font-style: italic
+    }
+
+    .box-content {
+      padding: 10px 0;
+      border-top: $regent-grey solid 1px;
+      margin-top: 10px;
+    }
+
+    p{
+      text-align: justify;
+    }
+  }
+}
+
+
+
