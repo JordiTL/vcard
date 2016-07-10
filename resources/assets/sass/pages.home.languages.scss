@@ -1,0 +1,40 @@
+@import "predef";
+
+#languages{
+  background-color: #242729;
+  padding: 0;
+
+  .container-fluid{
+    padding:50px;
+  }
+
+  .section-title-container{
+    color: $white;
+
+    h2{
+      border-bottom: 1px solid #FFF;
+      margin:0;
+    }
+  }
+
+  h4{
+    color: $white;
+  }
+
+  .circle-graph{
+    height: auto;
+    max-width:300px;
+  }
+
+  .graph-container{
+    text-align: center;
+    h4{
+      margin-bottom: -30px;
+    }
+  }
+
+
+  .section-content{
+    margin:0;
+  }
+}
